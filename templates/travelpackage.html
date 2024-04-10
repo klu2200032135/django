@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'Navbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+<div class="card" style="width: 18rem;">
+  <img src="{% static 'images/index.jpg' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Welcome to KL University</h5>
+    <p class="card-text">Welcome to Y22-PFSD-11 section</p>
+    <a href="https://newerp.kluniversity.in/index.php" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+{% endblock %}
+</body>
+</html>

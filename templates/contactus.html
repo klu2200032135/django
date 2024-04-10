@@ -1,0 +1,71 @@
+{% extends 'Navbar.html' %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Form</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+
+{% block body %}
+<!------ Include the above in your HEAD tag ---------->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form class="form-horizontal" action="{% url 'feedbackfunction' %}" method="POST">
+                {% csrf_token %}
+                <fieldset>
+                    <h1>Feedback Form</h1>
+                    <div class="control-group">
+                        <!-- Name -->
+                        <label class="control-label" for="name">Name</label>
+                        <div class="controls">
+                            <input type="text" id="name" name="name" placeholder="Enter your name" class="input-xlarge">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="control-group">
+                        <!-- E-mail -->
+                        <label class="control-label" for="email">E-mail</label>
+                        <div class="controls">
+                            <input type="text" id="email" name="email" placeholder="Enter your email" class="input-xlarge">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="control-group">
+                        <!-- Phone number -->
+                        <label class="control-label" for="phonenumber">Phone number</label>
+                        <div class="controls">
+                            <input type="text" id="phonenumber" name="phonenumber" placeholder="Enter your phone number" class="input-xlarge">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="control-group">
+                        <!-- Comments -->
+                        <label class="control-label" for="comments">Comments</label>
+                        <div class="controls">
+                            <textarea id="comments" name="comments" placeholder="Enter your comments" class="input-xlarge"></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="control-group">
+                        <!-- Button -->
+                        <div class="controls">
+                            <button class="btn btn-success" type="submit">Submit Feedback</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<br><br>
+<div>
+    <h6>Source (Feedback Form) Available in this link - https://bootsnipp.com/snippets/k7A</h6>
+</div>
+{% endblock %}
+
+</html>
